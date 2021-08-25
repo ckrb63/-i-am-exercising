@@ -19,30 +19,39 @@ class MainScreen extends StatelessWidget {
                   fit: BoxFit.fitWidth,
                 )),
           ),
-          Container(
-            child: FlatButton(
-              padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
-              onPressed: () {},
-              child: Container(
-                  child: Image.asset(
-                'assets/images/planning_working.png',
-                fit: BoxFit.contain,
-                width: double.infinity,
-              )),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                Container(
+                  child: FlatButton(
+                    padding: EdgeInsets.zero,
+                    onPressed: () {},
+                    child: Container(
+                        child: Image.asset(
+                      'assets/images/planning_working.png',
+                      fit: BoxFit.fill,
+                      width: double.infinity,
+                    )),
+                  ),
+                ),
+                SizedBox(height: 16,),
+                Container(
+                  child: FlatButton(
+                    padding: EdgeInsets.zero,
+                    onPressed: () {},
+                    child: Container(
+                        child: Image.asset(
+                          'assets/images/working.png',
+                          fit: BoxFit.fitHeight,
+                          width: double.infinity,
+                        )),
+                  ),
+                ),
+              ],
             ),
           ),
-          Container(
-            child: FlatButton(
-              padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
-              onPressed: () {},
-              child: Container(
-                  child: Image.asset(
-                'assets/images/working.png',
-                fit: BoxFit.fitHeight,
-                width: double.infinity,
-              )),
-            ),
-          ),
+
         ],
       ),
     );
