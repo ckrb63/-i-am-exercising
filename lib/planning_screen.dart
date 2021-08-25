@@ -5,6 +5,7 @@ class PlanningScreen extends StatelessWidget {
 
   Widget returnButton(String image, String name) {
     return Container(
+        margin: EdgeInsets.all(6),
         width: 100,
         child: Stack(
           children: [
@@ -36,15 +37,11 @@ class PlanningScreen extends StatelessWidget {
         ),
         backgroundColor: Color(0xffEEF0F3),
         body: Container(
-          padding: EdgeInsets.symmetric(
-            horizontal: 20,
-            vertical: 35,
-          ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   returnButton('assets/images/body/이두.png', '이두'),
                   returnButton('assets/images/body/가슴.png', '가슴'),
@@ -52,7 +49,7 @@ class PlanningScreen extends StatelessWidget {
                 ],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   returnButton('assets/images/body/전완.png', '전완'),
                   returnButton('assets/images/body/등.png', '등'),
@@ -60,7 +57,7 @@ class PlanningScreen extends StatelessWidget {
                 ],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   returnButton('assets/images/body/엉덩이.png', '엉덩이'),
                   returnButton('assets/images/body/코어.png', '코어'),
@@ -68,16 +65,13 @@ class PlanningScreen extends StatelessWidget {
                 ],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   returnButton('assets/images/body/허벅지.png', '허벅지'),
                   returnButton('assets/images/body/햄스트링.png', '햄스트링'),
                   returnButton('assets/images/body/종아리.png', '종아리'),
                 ],
               ),
-              SizedBox(
-                height: 200,
-              )
             ],
           ),
         ));

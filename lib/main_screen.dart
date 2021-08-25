@@ -12,7 +12,7 @@ class MainScreen extends StatelessWidget {
       backgroundColor: Color(0xffEEF0F3),
       body: Column(
         children: [
-          FlatButton(
+          RaisedButton(
             padding: EdgeInsets.zero,
             onPressed: null,
             child: Container(
