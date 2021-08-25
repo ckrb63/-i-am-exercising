@@ -49,6 +49,18 @@ flutter:
     - assets/images/main_image.png
     - assets/images/working.png
     - assets/images/planning_working.png
+    - assets/images/body/이두.png
+    - assets/images/body/가슴.png
+    - assets/images/body/어깨.png
+    - assets/images/body/전완.png
+    - assets/images/body/등.png
+    - assets/images/body/삼두.png
+    - assets/images/body/엉덩이.png
+    - assets/images/body/코어.png
+    - assets/images/body/승모.png
+    - assets/images/body/허벅지.png
+    - assets/images/body/햄스트링.png
+    - assets/images/body/종아리.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:i_am_exercising/mainscreen.dart';
+import 'package:i_am_exercising/main_screen.dart';
+import 'package:i_am_exercising/planning_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,11 +15,9 @@ class MyApp extends StatelessWidget {
         //canvasColor: Color.fromRGBO(255, 254, 229, 1),
       ),
       home: MainScreen(),
-
       routes: {
-        
         //'/': (ctx) => TabsScreen(),
-        //CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        PlanningScreen.routeName: (ctx) => PlanningScreen(),
         //MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },
     );
