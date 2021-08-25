@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1023050441562",
+    "project_id": "iamexercising-20d56",
+    "storage_bucket": "iamexercising-20d56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023050441562:android:6e04bab24e04cbd6dd0963",
+        "android_client_info": {
+          "package_name": "com.kimchankyu.i_am_exercising"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023050441562-lmhcfbh52ae175863htptcil64elrs70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5UNcXU2uE8f59_6F4VoRPPoaKHkNENwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023050441562-lmhcfbh52ae175863htptcil64elrs70.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
