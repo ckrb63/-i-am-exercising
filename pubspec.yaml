@@ -64,6 +64,10 @@ flutter:
     - assets/images/body/허벅지.png
     - assets/images/body/햄스트링.png
     - assets/images/body/종아리.png
+    - assets/images/icons/bodyicon.png
+    - assets/images/icons/trophyicon_gold.png
+    - assets/images/icons/trophyicon_silver.png
+    - assets/images/icons/trophyicon_bronze.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
