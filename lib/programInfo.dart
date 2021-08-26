@@ -13,8 +13,10 @@ class ProgramInfo extends StatefulWidget {
 class _ProgramInfoState extends State<ProgramInfo> {
   @override
   Widget build(BuildContext context) {
-    DayRoutineList list = DayRoutineList();
+    ProgramRoutine programlist = ProgramRoutine();
+    DayRoutineList list = programlist.programlist[0].list;
     return Scaffold(
+      appBar: AppBar(),
       body: Column(
         children: [
           Container(
@@ -43,15 +45,9 @@ class _ProgramInfoState extends State<ProgramInfo> {
           Expanded(
             child: Container(
               color: Color(0xffEEF0F3),
-              child: ListView(
-                //crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  DayRoutineCard(day: 1, point: 'Back',list: list,),
-                  DayRoutineCard(day: 2, point: 'Chest',list: list,),
-                  DayRoutineCard(day: 3, point: 'Leg',list: list,),
-                  DayRoutineCard(day: 4, point: 'Shoulder',list: list,),
-                ],
-              ),
+              child: ListView.builder(itemBuilder: (BuildContext context, int index){
+                return DayRoutineCard(day: index+1, point: programlist.programlist[index].point, list: programlist.programlist[index].list);
+              },itemCount: programlist.programlist.length,),
             ),
           ),
         ],
@@ -178,17 +174,21 @@ class BigRoutineCard extends StatefulWidget {
 
 
   @override
-  _BigRoutineCardState createState() => _BigRoutineCardState();
+  _BigRoutineCardState createState() => _BigRoutineCardState(list);
 }
 
 class _BigRoutineCardState extends State<BigRoutineCard> with TickerProviderStateMixin{
 
+  _BigRoutineCardState(this.tmplist);
+  DayRoutineList tmplist;
+  late List<DayRoutine> list;
   late AnimationController controller;
   late Animation<double> animation;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    list = tmplist.dayRoutineList;
     controller = AnimationController(
       duration: Duration(milliseconds: 250),
       upperBound: 1,
@@ -227,15 +227,11 @@ class _BigRoutineCardState extends State<BigRoutineCard> with TickerProviderStat
               ),
             ),
             Expanded(
-              child: ListView(
-                shrinkWrap: true,
-                children: [
-                  EachWorkOut(),
-                  EachWorkOut(),
-                  EachWorkOut(),
-                  EachWorkOut(),
-                ],
-              ),
+              child: ListView.builder(
+                  itemCount: list.length,
+                  itemBuilder: (BuildContext context, int index){
+                return EachWorkOut(routine: list[index]);
+              }),
             ),
           ],
         ),
@@ -245,10 +241,8 @@ class _BigRoutineCardState extends State<BigRoutineCard> with TickerProviderStat
 }
 
 class EachWorkOut extends StatelessWidget {
-  const EachWorkOut({
-    Key? key,
-  }) : super(key: key);
-
+  EachWorkOut({required this.routine});
+  final DayRoutine routine;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -266,9 +260,9 @@ class EachWorkOut extends StatelessWidget {
               textBaseline: TextBaseline.alphabetic,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children : [
-                Text('1st',style: TextStyle(color: Color(0xff048ABF),fontSize: 17),),
-                Text('V-grip Lat Pull Down',style: TextStyle(color: Colors.black,fontSize: 11,fontWeight: FontWeight.w500),),
-                Text('10x10 1rm 60%',style: TextStyle(color: Colors.black,fontSize: 11,fontWeight: FontWeight.w400),),
+                Text('${routine.number}st',style: TextStyle(color: Color(0xff048ABF),fontSize: 17),),
+                Text('${routine.name}',style: TextStyle(color: Colors.black,fontSize: 11,fontWeight: FontWeight.w500),),
+                Text('${routine.weight}x${routine.set} 1rm ${routine.onerm}%',style: TextStyle(color: Colors.black,fontSize: 11,fontWeight: FontWeight.w400),),
               ]
             ),
           ),

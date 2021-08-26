@@ -1,3 +1,27 @@
+class WholeDayRoutine{
+
+  WholeDayRoutine({required this.point,required this.list});
+
+  String point;
+  DayRoutineList list;
+}
+
+class ProgramRoutine{
+  List<WholeDayRoutine> programlist = [];
+  ProgramRoutine(){
+    programlist.add(WholeDayRoutine(point: 'Back',list: DayRoutineList()));
+    programlist.add(WholeDayRoutine(point: 'Chest',list: DayRoutineList()));
+    programlist.add(WholeDayRoutine(point: 'Leg',list: DayRoutineList()));
+    programlist.add(WholeDayRoutine(point: 'Shoulder',list: DayRoutineList()));
+  }
+  void addList(String point, DayRoutineList list){
+    programlist.add(WholeDayRoutine(point: point, list: list));
+  }
+
+
+
+}
+
 class DayRoutine{
   DayRoutine({required this.number, required this.name,required this.weight,required this.set,required this.onerm});
   int number;
@@ -25,9 +49,6 @@ class DayRoutineList{
       print(dayRoutineList[i].number);
     }
 
-    List<DayRoutine> getList(){
-      return dayRoutineList;
-    }
   }
 
 }
