@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:i_am_exercising/main_screen.dart';
 import 'package:i_am_exercising/planning_screen.dart';
+import 'programInfo.dart';
+
 // import 'package:firebase_core/firebase_core.dart';
 // import 'package:firebase_auth/firebase_auth.dart';
 
@@ -24,6 +26,7 @@ class MyApp extends StatelessWidget {
       routes: {
         //'/': (ctx) => TabsScreen(),
         PlanningScreen.routeName: (ctx) => PlanningScreen(),
+        ProgramInfo.routeName: (ctx) => ProgramInfo()
         //MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },
     );
