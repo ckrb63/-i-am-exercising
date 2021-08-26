@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:i_am_exercising/data/exercise_data.dart';
 
 class WorkingListScreen extends StatefulWidget {
@@ -78,6 +79,11 @@ class _WorkingListScreenState extends State<WorkingListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: FaIcon(FontAwesomeIcons.dumbbell),
+        ),
         backgroundColor: Color(0xffEEF0F3),
         appBar: AppBar(
           title: Text(''),
