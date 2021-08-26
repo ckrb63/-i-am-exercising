@@ -273,7 +273,6 @@ class EachWorkOut extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: 99,),
       ],
     );
   }
