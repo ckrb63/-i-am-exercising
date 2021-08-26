@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'firebase/API.dart';
 import 'package:i_am_exercising/planning_screen.dart';
 
@@ -7,10 +8,15 @@ class MainScreen extends StatelessWidget {
     Navigator.of(ctx).pushNamed('/Planning');
   }
 
+  void goWorkingListScreen(BuildContext ctx) {
+    Navigator.of(ctx).pushNamed('/WorkingList');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffEEF0F3),
+
 
       body: SingleChildScrollView(
         child: Column(
@@ -28,6 +34,7 @@ class MainScreen extends StatelessWidget {
                   )),
             ),
             Padding(
+
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 children: [
@@ -78,12 +85,16 @@ class MainScreen extends StatelessWidget {
                         fontSize: 15,
                       ),
                     ),
-                  )
+                  ),
+                  FlatButton(
+                      onPressed: () {
+                        goWorkingListScreen(context);
+                      },
+                      child: Text('click!')),
                 ],
               ),
             ),
-          ],
-        ),
+          ],),
       ),
     );
   }

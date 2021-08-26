@@ -3,6 +3,7 @@ import 'package:i_am_exercising/main_screen.dart';
 import 'package:i_am_exercising/planning_screen.dart';
 import 'programInfo.dart';
 
+import 'package:i_am_exercising/working_list_screen.dart';
 // import 'package:firebase_core/firebase_core.dart';
 // import 'package:firebase_auth/firebase_auth.dart';
 
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
       routes: {
         //'/': (ctx) => TabsScreen(),
         PlanningScreen.routeName: (ctx) => PlanningScreen(),
-        ProgramInfo.routeName: (ctx) => ProgramInfo()
+        ProgramInfo.routeName: (ctx) => ProgramInfo(),
+        WorkingListScreen.routeName: (ctx) => WorkingListScreen(),
         //MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },
     );
